@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Perfumería Elegance</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="cart-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 5L20 15H30L25 5Z" fill="#8B5CF6"/>
+                    <rect x="22" y="15" width="6" height="25" rx="1" fill="#A78BFA"/>
+                    <ellipse cx="25" cy="42" rx="8" ry="3" fill="#C4B5FD"/>
+                </svg>
+                <span>Perfumería Elegance</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/shop.html" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Volver a la Tienda
+                </a>
+                <button id="logout-button" class="btn-secondary">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h1>Tu Carrito de Compras</h1>
+            </div>
+
+            <div id="cart-content" class="cart-content">
+                <div class="loading">Cargando carrito...</div>
+            </div>
+
+            <div id="cart-empty" class="cart-empty" style="display: none;">
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <h2>Tu carrito está vacío</h2>
+                <p>Agrega algunos perfumes para comenzar</p>
+                <a href="/shop.html" class="btn-primary">Ir a la Tienda</a>
+            </div>
+
+            <div id="cart-summary" class="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío:</span>
+                    <span class="free-shipping">Gratis</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <button id="checkout-button" class="btn-primary btn-large">
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="/js/cart.js"></script>
+</body>
+</html>
