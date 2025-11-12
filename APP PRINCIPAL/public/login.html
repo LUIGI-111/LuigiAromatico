@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Perfumería Elegance</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 5L20 15H30L25 5Z" fill="#8B5CF6"/>
+                        <rect x="22" y="15" width="6" height="25" rx="1" fill="#A78BFA"/>
+                        <ellipse cx="25" cy="42" rx="8" ry="3" fill="#C4B5FD"/>
+                    </svg>
+                </div>
+                <h1>Perfumería Elegance</h1>
+                <p class="subtitle">Descubre tu fragancia perfecta</p>
+            </div>
+
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        placeholder="tu@email.com"
+                        required 
+                        autocomplete="email"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        placeholder="••••••••"
+                        required 
+                        autocomplete="current-password"
+                    />
+                </div>
+
+                <div id="login-error" class="error-message"></div>
+
+                <button type="submit" class="btn-primary">
+                    <span>Iniciar Sesión</span>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <div class="demo-info">
+                    <p><strong>Cuenta Demo:</strong></p>
+                    <p>📧 cliente@perfumes.com</p>
+                    <p>🔑 password123</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>

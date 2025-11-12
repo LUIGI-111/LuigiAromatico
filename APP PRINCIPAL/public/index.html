@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Perfumería Online</title>
+
+    <link rel="stylesheet" href="/styles.css" />
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <section id="login-section" class="panel">
+
+            <h1>Iniciar Sesión</h1>
+
+            <form id="login-form">
+
+                <div class="form-group">
+
+                    <label for="email">Correo electrónico</label>
+
+                    <input type="email" id="email" required />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="password">Contraseña</label>
+
+                    <input type="password" id="password" required />
+
+                </div>
+
+                <button type="submit">Entrar</button>
+
+                <p id="login-error" class="error"></p>
+
+            </form>
+
+        </section>
+
+
+
+        <section id="menu-section" class="panel hidden">
+
+            <header class="menu-header">
+
+                <h1>Catálogo de Perfumes</h1>
+
+                <div class="user-info">
+
+                    <span id="user-name"></span>
+
+                    <button id="logout-button">Cerrar sesión</button>
+
+                </div>
+
+            </header>
+
+            <div id="perfume-list" class="perfume-grid"></div>
+
+        </section>
+
+
+
+        <section id="cart-section" class="panel hidden">
+
+            <h2>Carrito</h2>
+
+            <div id="cart-items"></div>
+
+            <button id="checkout-button">Enviar pedido</button>
+
+            <p id="cart-message" class="success"></p>
+
+        </section>
+
+    </div>
+
+
+
+    <script src="/app.js" type="module"></script>
+
+</body>
+
+</html>
